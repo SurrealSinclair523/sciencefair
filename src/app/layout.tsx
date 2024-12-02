@@ -23,7 +23,7 @@ export default function RootLayout({
   }, []);
 
   const client = new Ably.Realtime({
-    key: "xiEQTw.SBJKWA:Kv7RDv6PngxN8y8ttHsOWHDQqchaEYtU9rgKefhsl7o",
+    key: "SeEuZw.TBkYJA:hxWL4ZW_Br542Vbfj6X8DxbeUNzjVuJhHKbOuSg7uDk",
   });
   return (
     <html lang="en">

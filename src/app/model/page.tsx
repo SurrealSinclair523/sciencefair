@@ -48,7 +48,7 @@ const ModalLayout = () => {
     setLoading(true);
 
     const API_KEY =
-      "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";
+      "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";
 
     const invokeUrl =
       "https://health.api.nvidia.com/v1/biology/nvidia/molmim/generate";

@@ -47,7 +47,7 @@ const ComponentHeader: React.FC<ComponentHeaderProps> = ({
                 <div className="mb-4.5 flex flex-col gap-6 xl:flex-row">
                   <div className="w-full xl:w-1/2">
                     <label className="mb-3 block text-sm font-medium text-black dark:text-white">
-                      SMILS String
+                      SMILES String
                     </label>
                     <input
                       type="text"
