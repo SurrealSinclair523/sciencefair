@@ -1,14 +1,15 @@
 "use client";
 import "jsvectormap/dist/jsvectormap.css";
 import "flatpickr/dist/flatpickr.min.css";
-import "@/css/style.css";
+import "@/css/style.css"; // Corrected import
 import React, { useEffect, useState } from "react";
-import Loader from "@/components/common/Loader";
+import Loader from "@/components/common/Loader"; // Corrected import
+import Head from "next/head"; // Import Head component
 
 import * as Ably from "ably";
 import { AblyProvider, ChannelProvider } from "ably/react";
 import { SessionProvider } from "next-auth/react";
-import { UserProvider } from "@/app/context/UserContext";
+import { UserProvider } from "@/app/context/UserContext"; // Corrected import
 
 export default function RootLayout({
   children,
@@ -27,8 +28,9 @@ export default function RootLayout({
   });
   return (
     <html lang="en">
-      {/* <script src="https://unpkg.com/@rdkit/rdkit/dist/RDKit_minimal.js"></script> */}
-      <script src="https://unpkg.com/@rdkit/rdkit/dist/RDKit_minimal.js"></script>
+      <Head>
+        <script src="https://unpkg.com/@rdkit/rdkit/dist/RDKit_minimal.js" />
+      </Head>
       <body suppressHydrationWarning={true}>
         <SessionProvider>
           <UserProvider>
