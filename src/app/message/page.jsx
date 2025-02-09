@@ -1,8 +1,8 @@
+"use client";
+
 import dynamic from "next/dynamic";
 
-const Chat = dynamic(() => import("./chat"), {
-  ssr: false,
-});
+const Chat = dynamic(() => import("./chat"));
 
 function page() {
   return (

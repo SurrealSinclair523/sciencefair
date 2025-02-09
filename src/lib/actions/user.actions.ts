@@ -34,7 +34,7 @@ export async function createUser(user: CreateUserParams) {
 
     return JSON.parse(JSON.stringify(newUser));
   } catch (error: any) {
-    console.log(error);
+    console.error("Error during user login:", error);
     handleError(error);
     throw new Error(
       error.message || "An error occurred during user registration",

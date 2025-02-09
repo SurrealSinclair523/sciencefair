@@ -50,8 +50,7 @@ const ModalLayout = () => {
     const API_KEY =
       "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";
 
-    const invokeUrl =
-      "https://health.api.nvidia.com/v1/biology/nvidia/molmim/generate";
+    const invokeUrl = "/api/molmin"; // Use the proxy endpoint
 
     const payload = {
       algorithm: "CMA-ES",
@@ -75,8 +74,9 @@ const ModalLayout = () => {
         body: JSON.stringify(payload),
       });
 
-      const data = await response.json();
-      const generatedMolecules = JSON.parse(data.molecules).map((mol: any) => ({
+      const responseData = await response.json();
+      console.log("Response data:", responseData); // Log the response data
+      const generatedMolecules = JSON.parse(responseData.molecules).map((mol: any) => ({
         structure: mol.sample,
         score: mol.score,
       }));
@@ -104,7 +104,7 @@ const ModalLayout = () => {
 
       console.log(generatedMolecules);
     } catch (error) {
-      console.error("Error fetching data:", error);
+      console.error("Error fetching data:", error); // Log the error
     } finally {
       setLoading(false);
     }
