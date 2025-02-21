@@ -15,7 +15,9 @@ import {
   Settings,
   MessageSquareText,
   ChevronLeft,
+  Dna,
 } from "lucide-react";
+
 interface SidebarProps {
   sidebarOpen: boolean;
   setSidebarOpen: (arg: boolean) => void;
@@ -44,6 +46,11 @@ const menuGroups = [
         icon: <Microscope size={25} />,
         label: "Research",
         route: "/research",
+      },
+      {
+        icon: <Dna size={25} />,
+        label: "Codon Optimization",
+        route: "/codon-optimization",
       },
       {
         icon: <MessageSquareText size={25} />,
@@ -87,7 +94,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                   priority
                 />
               </div>
-              <p className="text-xl font-semibold text-white">NARPMed</p>
+              <p className="text-xl font-semibold text-white">NARPMED</p>
             </div>
           </Link>
 
